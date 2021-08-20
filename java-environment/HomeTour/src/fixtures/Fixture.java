@@ -21,37 +21,42 @@ public abstract class Fixture {
 	public static void Interact(String target, Room curRoom) {
 		System.out.print("\n");
 		switch (target) {
-			// Depending on the target, the appropriate interaction is called
-			case ("Lamp"):
-				// First, the current location is checked to ensure the object is in the current room
-				if ( curRoom.location[0] == 0 && curRoom.location[1] == 0) {
-					System.out.println(RoomManager.objMap[0][0][0].interact);
-					break;
-				}
-			case ("Chest"):
-				if ( curRoom.location[0] == 0 && curRoom.location[1] == 2) {
-					System.out.println(RoomManager.objMap[0][2][0].interact);
-					break;
-				}
-			case ("Teapot"):
-				if ( curRoom.location[0] == 0 && curRoom.location[1] == 1) {
-					System.out.println(RoomManager.objMap[0][1][0].interact);
-					break;
-				}
-			case ("Flower"):
-				if ( curRoom.location[0] == 2 && curRoom.location[1] == 2) {
-					System.out.println(RoomManager.objMap[2][2][0].interact);
-					break;
-				}
-			case ("Apple Tree"):
-				if ( curRoom.location[0] == 2 && curRoom.location[1] == 2) {
-					System.out.println(RoomManager.objMap[2][2][1].interact);
-					break;
-				}
-			default: { 
-				System.out.println("There is not a " + target + " in this room.");
+		// Depending on the target, the appropriate interaction is called
+		case "Lamp": {
+			// First, the current location is checked to ensure the object is in the current room
+			if ( curRoom.location[0] == 0 && curRoom.location[1] == 0 && target.equals("Lamp")) {
+				System.out.println(RoomManager.objMap[0][0][0].interact);
 				break;
-				}
+			}
+		}
+		case "Chest": {
+			if ( curRoom.location[0] == 0 && curRoom.location[1] == 2 && target.equals("Chest")) {
+				System.out.println(RoomManager.objMap[0][2][0].interact);
+				break;
+			}
+		}
+		case "Teapot": {
+			if ( curRoom.location[0] == 0 && curRoom.location[1] == 1 && target.equals("Teapot")) {
+				System.out.println(RoomManager.objMap[0][1][0].interact);
+				break;
+			}
+		}
+		case "Flower": {
+			if ( curRoom.location[0] == 2 && curRoom.location[1] == 2 && target.equals("Flower")) {
+				System.out.println(RoomManager.objMap[2][2][0].interact);
+				break;
+			}
+		}
+		case "Apple Tree": {
+			if ( curRoom.location[0] == 2 && curRoom.location[1] == 2 && target.equals("Apple Tree")) {
+				System.out.println(RoomManager.objMap[2][2][1].interact);
+				break;
+			}
+		}
+		default: { 
+			System.out.println("There is not a " + target + " in this room.");
+			break;
+		}
 		}
 		System.out.print("\n");
 	}

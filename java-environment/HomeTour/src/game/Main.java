@@ -76,17 +76,18 @@ public class Main {
 		}
 		System.out.print("\n");	
 		// Inform the player of their action options and tell them to provide an input
-		System.out.println("Your available actions are Move, Interact, and Exit.");
+		System.out.println("Your available actions are Move, Interact, and Quit.");
 		System.out.println("\n" + "Enter Action and Target: ");
 		// Use the scanner to collect user input
 		String actionTarget = scan.nextLine();
 		// Use an if statement to handle exceptions
-		if (actionTarget.contains(" ") || actionTarget.contains("Exit")) {
+		if (actionTarget.contains(" ") || actionTarget.contains("Quit")) {
 			// Split the user input between an action and a target
 			userInput = actionTarget.split(" ", 2);
 		}
 		// If the user provides an invalid input, use dummy values
 		else {
+			System.out.println("made it here");
 			userInput[0] = " ";
 			userInput[1] = " ";
 		}
