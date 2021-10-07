@@ -1,0 +1,58 @@
+<!--We should start with our doctype declaration specifying that this document is an HTML document. Please note that this is not specific to HTML; other doctypes do exist (e.g. DTD).-->
+<!DOCTYPE html>
+
+<!--Recall that HTML uses tags to specify content. The root tag of any HTML document is "html". By "root" tag, I simply mean that it is the outermost tag in the document that encompasses all other tags.
+
+NOTE: There are opening and closing tags. Most tags are required to be closed. Closing tags start with the "/" symbol.-->
+<html>
+    <!--The head tag is used to specify metadata about our document. This can include, for instance, a title and information about the character encoding. The head might also contain links to other resources such as style sheets and CDNS (content delivery networks).-->
+    <head>
+        <title>Employee Reimbursements</title>
+        <meta charset="UTF-8" />
+        <!--We can also specify the location of external stylesheets in the head as well.-->
+        <link rel="stylesheet" href="Scripts/managerhome.css" />
+    </head>
+    <!--The body tag contains the web elements that are visible to the end users and can also include script tags and style tags.-->
+    <h1 id="user_name"></h1>
+    <button type="button" onclick="logout()" id="logout">Logout</button>
+    <body>
+        <!--The "header" tag is actually a semantic tag. Semantic tags are special in that they create meaning to any developers who are reading your document.-->
+      <header>
+          <div>
+            <!--If you want to modify the style of an element, you can use inline CSS, though this is not the best practice. In order to do so, you have to use the "style" attribute.-->
+            <h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Packages Inc. Reimbursements</h1>
+          </div>
+      </header>
+      
+      <nav>
+      	<a href="statistics.html" id="statistic">Statistics</a>
+      </nav>
+
+      <!--I've created this outer div to better manage/style all of the inner divs into rows and columns, etc.-->
+      <div id="reimbursement_container">
+        <!--We are going to make a reimbursement directory with links to each reimbursement. Each reimbursement that is listed here will have a name, a description, an image, and a couple of bullet points listing the first couple of steps to making the reimbursement.
+        
+        The "id" attribute is a very common attribute that is used to uniquely identify an element on a web page. We can use ids to target elements for styles or scripting purposes.
+		-->
+        
+      </div>
+
+      <!--Using the style tag is another way of applying styles via CSS to elements. So how do we target elements? We can target elements in various ways: by tag name, by IDs, class names. -->
+      <style>
+          h3 {
+            color: black;
+          }
+
+          .reimbursement_div{
+              background-color: lightslategray;
+          }
+      </style>
+      <footer>
+          <h5>Copyright No One. No Rights Reserved.</h5>
+      </footer>
+      <!--We can reference the location of our JS scripts here as well.-->
+      <!-- <script src="../Scripts/home.js"></script> -->
+      <!-- <script src="file:///C:/Users/Nicholas%20Isakson/Desktop/RevatureTesting/java-environment/Project1/src/main/java/static/Scripts/home.js"></script>-->
+      <script src="Scripts/managerajax.js"></script>
+    </body>
+</html>
